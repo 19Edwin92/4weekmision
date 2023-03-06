@@ -6,7 +6,7 @@ export const useInput = (initialValue) => {
 const hanleChange = (e) => {
   setInputvalue(e.target.value);
 };
-  return [inputValue, hanleChange]
+  return [inputValue, hanleChange, setInputvalue]
 }
 
 
