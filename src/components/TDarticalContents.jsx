@@ -12,7 +12,7 @@ function TDarticalContents({articalText, isDone}) {
   return (
     <TDarticalContentsDiv>
       {/* 조건이 하나일 때 "if.jh" 너의 이름은 뭐니 */}
-      <p>{articalText}</p>
+      <p className='title'>{articalText}</p>
       {todolist.map(el => 
         el.isDone === isDone &&
            (
@@ -21,6 +21,7 @@ function TDarticalContents({articalText, isDone}) {
               <p>{el.txt}</p>
               <button onClick={() => dispatch(D_DONETD(el.id))}>완료</button>
               <button onClick={() => dispatch(D_DELETETD(el.id))}>삭제</button>
+              <button>수정</button>
             </TDarticalDiv>
           )
       )}

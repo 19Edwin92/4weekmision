@@ -47,6 +47,11 @@ export const TDarticalForm = styled.form`
 // TD_articalContents.jsx 관련 CSS 내용
 export const TDarticalContentsDiv = styled.div`
   min-height: 50px;
+
+  .title {
+    font-size: 20px;
+    font-weight:900;
+  }
 `
 
 export const TDarticalDiv = styled.div`
