@@ -4,8 +4,8 @@ import { D_PLUSETD } from '../../modules/todolists'
 import { TDarticalForm } from './TDcss'
 
 function TDwrite() {
-  const [title, hanleChange1, setTitle] =  useInput('');
-  const [txt, hanleChange2, setTxt] =  useInput('');
+  const [title, titleHandle, setTitle] =  useInput('');
+  const [txt, txtHandle, setTxt] =  useInput('');
   const dispatch = useDispatch();
 
   return (
@@ -15,9 +15,9 @@ function TDwrite() {
       setTitle('');
       setTxt('')
       }}>
-      할일이름 : <input required type="text" value={title} onChange={hanleChange1}/>
+      할일이름 : <input required type="text" value={title} onChange={titleHandle}/>
       <br/>
-      할일내용 : <input required type="text" value={txt} onChange={hanleChange2}/>
+      할일내용 : <input required type="text" value={txt} onChange={txtHandle}/>
       <br/>
       <input type="submit"/>
       <input type="submit" onSubmit={()=>dispatch(D_PLUSETD({title, txt}))}/>
