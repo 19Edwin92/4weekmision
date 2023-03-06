@@ -14,7 +14,6 @@ export const Layout = styled.div`
 
   div {
   margin-top: 10px;
-  border: 1px solid red;
 }
 `
 
@@ -23,18 +22,28 @@ export const HeaderLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-          //App.jsx > Layout border 없애면 필요 없어지는 태그
-          div {
-            height: 50px;
-            border: none;
-            margin-top: 0;
-            padding: 0 10px;
-            line-height: 50px;
-            font-size: 20px;
-            font-weight: 700;
-          }
+  div {
+    height: 50px;
+    margin-top: 0;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
   div:nth-child(3) {
     text-align: right;
   }
+`
+
+// TD_articsl.jsx 관련 CSS 내용
+export const TDarticalForm = styled.form`
+ width: 100%;
+ padding: 10px 0;
+ background-color: yellow;
+ margin-top: 10px;
+`
+
+export const TDarticalDiv = styled.div`
+  border: 1px solid red;
 `

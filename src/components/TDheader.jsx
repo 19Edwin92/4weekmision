@@ -1,7 +1,7 @@
 import React from 'react'
-import { HeaderLayout } from './TD_Css'
+import { HeaderLayout } from './TDcss'
 
-function TD_header() {
+function TDheader() {
   return (
     <HeaderLayout>
       <div>TODO-Lists</div>
@@ -11,4 +11,4 @@ function TD_header() {
   )
 }
 
-export default TD_header
+export default TDheader
