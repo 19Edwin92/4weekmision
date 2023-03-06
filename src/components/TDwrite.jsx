@@ -16,7 +16,6 @@ function TDwrite() {
       setTxt('')
       }}>
       
-      
       할일이름 : <input required type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
       <br/>
       할일내용 : <input required type="text" value={txt} onChange={(e) => setTxt(e.target.value)}/>

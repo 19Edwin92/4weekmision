@@ -44,6 +44,11 @@ export const TDarticalForm = styled.form`
  margin-top: 10px;
 `
 
+// TD_articalContents.jsx 관련 CSS 내용
+export const TDarticalContentsDiv = styled.div`
+  min-height: 50px;
+`
+
 export const TDarticalDiv = styled.div`
   border: 1px solid red;
 `

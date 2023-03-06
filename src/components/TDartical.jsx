@@ -1,8 +1,6 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { TDarticalDiv } from './TDcss'
-import { useDispatch } from 'react-redux'
-import { D_EDLETETD } from '../modules/todolists';
+import { useSelector, useDispatch } from 'react-redux'
+import TDarticalContents from './TDarticalContents'
 
 function TDartical() {
   const todolist = useSelector((state)=> {
@@ -13,16 +11,8 @@ function TDartical() {
   
   return (
     <div>
-    {todolist.map(el => {
-      return (
-        <TDarticalDiv key={el.id}>
-          <p>{el.title}</p>
-          <p>{el.txt}</p>
-          <button>완료</button>
-          <button onClick={()=> dispatch(D_EDLETETD(el.id))}>삭제</button>
-        </TDarticalDiv>
-      )
-    })}
+      <TDarticalContents articalText="할일목록" isDone={false}/>
+      <TDarticalContents articalText="완료목록" isDone/>
     </div>
   )
 };
