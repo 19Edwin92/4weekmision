@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { D_PLUSETD } from '../modules/todolists'
+import { D_PLUSETD } from '../../modules/todolists'
 import { TDarticalForm } from './TDcss'
 
 function TDwrite() {

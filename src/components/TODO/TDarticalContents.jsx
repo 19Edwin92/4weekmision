@@ -1,7 +1,7 @@
 import React from 'react'
 import { TDarticalContentsDiv, TDarticalDiv } from './TDcss'
 import { useDispatch, useSelector } from 'react-redux'
-import { D_DELETETD, D_DONETD } from '../modules/todolists';
+import { D_DELETETD, D_DONETD } from '../../modules/todolists';
 import TDedite from './TDedite';
 
 

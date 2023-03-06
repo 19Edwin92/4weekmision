@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { D_UPDATE } from '../modules/todolists'
+import { D_UPDATE } from '../../modules/todolists'
 
 
 
