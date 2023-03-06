@@ -7,7 +7,8 @@ function TDListItem() {
     return state.todolist
   })
   const prams = useParams();
-  console.log(prams.id)
+  // console.log(prams.id)
+  // console.log(todo)
 
   const findtodo = todo.find(el=> el.id === Number(prams.id))
   const navigate = useNavigate();

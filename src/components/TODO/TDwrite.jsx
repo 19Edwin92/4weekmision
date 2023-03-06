@@ -20,7 +20,6 @@ function TDwrite() {
       할일내용 : <input required type="text" value={txt} onChange={txtHandle}/>
       <br/>
       <input type="submit"/>
-      <input type="submit" onSubmit={()=>dispatch(D_PLUSETD({title, txt}))}/>
     </TDarticalForm>
   )
 }

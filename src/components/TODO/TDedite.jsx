@@ -23,6 +23,7 @@ function TDedite({el}) {
 
   return (
     <>
+    {/* <></> 빈태그로 묶어주기 그러면 하나의 연산으로 사용할 수 있을 것 같다. */}
     {edit ? <input required type="text" value={txt} onChange={e=> setTxt(e.target.value)}/> : <span style={{cursor:"pointer"}} onClick={()=> {navigate(`/todo/${el.id}`)}}>{el.txt}</span>}
     {edit ? <input type="button" value="확인" onClick={checkFunc} /> : <input type="button" value="수정" onClick={editFunc}/>}
     </>
