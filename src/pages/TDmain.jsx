@@ -11,7 +11,7 @@ function TDmain() {
       <Layout>
         <TDheader/>
         <TDwrite />
-        <TDartical />
+        <TDartical />  {/* TDarticalContents  -> 수정시 TDedite -> TDListItem*/}
       </Layout>
     </>
   )
