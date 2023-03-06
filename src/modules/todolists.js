@@ -10,6 +10,7 @@ const DONETD = "done_todo"
 const UPDATE = "update_todo"
 
 export const D_PLUSETD = (payload) => {
+  console.log(payload)
   return {
     type:PLUSETD,
     payload
