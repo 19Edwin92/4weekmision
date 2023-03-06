@@ -45,13 +45,15 @@ const todolist = (state=initialState, action) => {
       const deleteTD = state.filter(el=> el.id !== Number(action.payload))
       return [...deleteTD]
     case DONETD:
-      const doneTD = state.find(el=> el.id === Number(action.payload))
+      const DoneTDArr = [...state]
+      const doneTD = DoneTDArr.find(el=> el.id === Number(action.payload))
       doneTD.isDone = true
-      return [...state]
+      return [...DoneTDArr]
     case UPDATE:
-      const updateTD = state.find(el=> el.id === Number(action.payload.id))
+      const UpateTDArr = [...state]
+      const updateTD = UpateTDArr.find(el=> el.id === Number(action.payload.id))
       updateTD.txt = action.payload.txt
-      return [...state]
+      return [...UpateTDArr]
     default :
       return state
   }
