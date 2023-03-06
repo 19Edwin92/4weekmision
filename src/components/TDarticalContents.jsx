@@ -1,7 +1,9 @@
 import React from 'react'
 import { TDarticalContentsDiv, TDarticalDiv } from './TDcss'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { D_DELETETD, D_DONETD } from '../modules/todolists';
+import TDedite from './TDedite';
+
 
 function TDarticalContents({articalText, isDone}) {
   const todolist = useSelector((state)=> {
@@ -18,10 +20,9 @@ function TDarticalContents({articalText, isDone}) {
            (
             <TDarticalDiv key={el.id}>
               <p>{el.title}</p>
-              <p>{el.txt}</p>
+              <TDedite el={el}/>
               <button onClick={() => dispatch(D_DONETD(el.id))}>완료</button>
               <button onClick={() => dispatch(D_DELETETD(el.id))}>삭제</button>
-              <button>수정</button>
             </TDarticalDiv>
           )
       )}
@@ -31,15 +32,15 @@ function TDarticalContents({articalText, isDone}) {
 
 export default TDarticalContents
 
-{/* {todolist.map(el => {
-  if (el.isDone === isDone) {
-    return (
-      <TDarticalDiv key={el.id}>
-        <p>{el.title}</p>
-        <p>{el.txt}</p>
-        <button onClick={() => dispatch(D_DONETD(el.id))}>완료</button>
-        <button onClick={() => dispatch(D_DELETETD(el.id))}>삭제</button>
-      </TDarticalDiv>
-    )
-  }
-})} */}
+// {todolist.map(el => {
+//   if (el.isDone === isDone) {
+//     return (
+//       <TDarticalDiv key={el.id}>
+//         <p>{el.title}</p>
+//         <p>{el.txt}</p>
+//         <button onClick={() => dispatch(D_DONETD(el.id))}>완료</button>
+//         <button onClick={() => dispatch(D_DELETETD(el.id))}>삭제</button>
+//       </TDarticalDiv>
+//     )
+//   }
+// })}

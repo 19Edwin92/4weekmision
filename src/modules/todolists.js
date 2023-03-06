@@ -7,6 +7,7 @@ const initialState = [
 const PLUSETD = "pluse_todo"
 const EDLETETD = "delete_todo"
 const DONETD = "done_todo"
+const UPDATE = "update_todo"
 
 export const D_PLUSETD = (payload) => {
   return {
@@ -29,6 +30,13 @@ export const D_DELETETD = (payload) => {
   }
 }
 
+export const D_UPDATE = (payload) => {
+  return {
+    type:UPDATE,
+    payload:payload
+  }
+}
+
 const todolist = (state=initialState, action) => {
   switch (action.type) {
     case PLUSETD :
@@ -39,6 +47,10 @@ const todolist = (state=initialState, action) => {
     case DONETD:
       const doneTD = state.find(el=> el.id === Number(action.payload))
       doneTD.isDone = true
+      return [...state]
+    case UPDATE:
+      const updateTD = state.find(el=> el.id === Number(action.payload.id))
+      updateTD.txt = action.payload.txt
       return [...state]
     default :
       return state
