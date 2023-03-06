@@ -1,8 +1,8 @@
 import React from 'react'
-import TDheader from './TODO/TDheader'
-import TDartical from './TODO/TDartical'
-import { CreateGlobal, Layout } from './TODO/TDcss'
-import TDwrite from './TODO/TDwrite'
+import TDheader from '../components/TODO/TDheader'
+import TDartical from '../components/TODO/TDartical'
+import { CreateGlobal, Layout } from '../components/TODO/TDcss'
+import TDwrite from '../components/TODO/TDwrite'
 
 function TDmain() {
   return (

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TDListItem from  "../pages/TDListItem";
-import TDmain from "../components/TDmain";
+import TDmain from "../pages/TDmain";
 
 const Router = () => {
   return (
