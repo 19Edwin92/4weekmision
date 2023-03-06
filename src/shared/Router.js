@@ -7,7 +7,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<TDmain/>}/>
-        <Route path="/todo/:id" element={<TDListItem/>}/>
+        <Route path="/todos/:id" element={<TDListItem/>}/>
       </Routes>
     </BrowserRouter>
   )
